@@ -4,7 +4,6 @@ import { io } from "socket.io-client";
 import toast from "react-hot-toast";
 import { AiOutlineDelete } from "react-icons/ai";
 import warning from "./assets/audio/warning.mp3" 
-import { IoVolumeHighSharp } from "react-icons/io5";
 
 function App() {
   const [loading, setLoading] = useState(false);
