@@ -1,7 +1,6 @@
 import axios from "axios";
 import { io } from "../index.js";
 import Website from "../model/websiteModel.js";
-import { BsVolumeMute, BsVolumeUp } from "react-icons/bs";
 
 
 export const postUrl = async(req,res)=>{
