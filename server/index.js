@@ -1,16 +1,18 @@
 import express from "express";
-// import axios from "axios";
-// import Website from "./model/websiteModel.js";
 import cors from "cors";
+import dotenv from "dotenv"
 import http from "http";
 import { Server } from "socket.io";
 import connect from "./db/connectDB.js";
 import websiteRouter from "./routers/websiteRouter.js"
 import path from "path";
 
+dotenv.config();
+
 const __dirname = path.resolve();
 
 const app = express();
+const port = process.env.PORT || 5000
 app.use(express.json());
 app.use(cors());
 
@@ -32,7 +34,7 @@ app.get("*",(req,res)=>{
 
 
 
-server.listen(5000, () => {
+server.listen(port, () => {
   connect();
   console.log("Server running on http://localhost:5000")
 });
