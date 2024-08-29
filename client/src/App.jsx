@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { io } from "socket.io-client";
 import toast from "react-hot-toast";
-import { AiOutlineDelete } from "react-icons/ai";
 import warning from "./assets/audio/warning.mp3" 
 
 function App() {
@@ -149,7 +148,7 @@ function App() {
                     className="bg-red-500 text-white rounded px-2 py-1"
                     onClick={() => deleteWebsite(website._id)}
                   >
-                    <AiOutlineDelete size={20}/>
+                    Delete
                   </button>
                 </div>
               </div>
