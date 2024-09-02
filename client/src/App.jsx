@@ -17,7 +17,9 @@ function App() {
   const audioRef = useRef(new Audio(warning));
 
   useEffect(() => {
-    const socket = io("https://website-monitor-production.onrender.com");
+    const socket = io("https://website-monitor-production.onrender.com" , {
+      transports: ["websocket"],
+    });
     fetchWebsites();
 
     socket.on("websiteAdded", (newWebsite) => {
