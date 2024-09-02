@@ -19,7 +19,7 @@ app.use(cors());
 const server = http.createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin: "https://website-monitor-production.onrender.com",
+    origin: "http://localhost:4000",
     methods: ["GET", "POST", "PUT", "DELETE"],
   },
 });
