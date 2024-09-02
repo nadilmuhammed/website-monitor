@@ -56,7 +56,7 @@ function App() {
 
   const fetchWebsites = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/websites");
+      const response = await axios.get("https://website-monitor-production.onrender.com/api/websites");
       if (response.data) {
         setWebsites(response.data);
       }
@@ -69,7 +69,7 @@ function App() {
   const addWebsite = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/websites", {
+      const response = await axios.post("https://website-monitor-production.onrender.com/api/websites", {
         url,
       });
       setWebsites([...websites, response.data]);
@@ -84,7 +84,7 @@ function App() {
 
   const deleteWebsite = async (id) => {
     setLoadDelete(true);
-    await axios.delete(`http://localhost:5000/api/websites/${id}`);
+    await axios.delete(`https://website-monitor-production.onrender.com/api/websites/${id}`);
     setWebsites(websites.filter((website) => website._id !== id));
     setLoadDelete(false);
   };
