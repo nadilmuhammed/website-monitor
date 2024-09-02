@@ -17,7 +17,7 @@ function App() {
   const audioRef = useRef(new Audio(warning));
 
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    const socket = io("https://website-monitor-production.onrender.com");
     fetchWebsites();
 
     socket.on("websiteAdded", (newWebsite) => {
@@ -145,7 +145,7 @@ function App() {
                 </div>
                 <div>
                   <button
-                    className="bg-red-500 text-white rounded px-2 py-1"
+                    className="rounded px-2 py-1"
                     onClick={() => deleteWebsite(website._id)}
                   >
                     Delete
